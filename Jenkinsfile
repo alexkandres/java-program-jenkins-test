@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    
+    environment {
+        DB_ENGINE = 'sqlite'   
+    }
+    
     stages {
         stage('Test') {
             steps {
-                    bat 'echo hiiiiiiiiiiiiiiiiiiiii'
+                    bat 'set'
             }
         }
     }
