@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3){
-                    t 'echo hiiiiiiiiiiiiiiiiiiiii'
+                    powershell 'echo hiiiiiiiiiiiiiiiiiiiii'
                 }
                 
             }
