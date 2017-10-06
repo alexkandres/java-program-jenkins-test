@@ -18,5 +18,11 @@ pipeline {
         success {
             echo "Success: only run if build was success"   
         }
+        failure {
+            echo "failure: only when build fails"   
+        }
+        changed {
+            echo "changed: only when build chenges"   
+        }
     }
 }
