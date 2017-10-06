@@ -3,10 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry(3){
-                    powershell 'echo hiiiiiiiiiiiiiiiiiiiii'
-                }
-                
+                    sh 'echo hiiiiiiiiiiiiiiiiiiiii'
             }
         }
     }
