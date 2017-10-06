@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3){
-                    bat 'echo hiiiiiiiiiiiiiiiiiiiii'
+                    t 'echo hiiiiiiiiiiiiiiiiiiiii'
                 }
                 
             }
