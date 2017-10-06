@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DB_ENGINE = 'sqlite'   
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')   
     }
     
     stages {
