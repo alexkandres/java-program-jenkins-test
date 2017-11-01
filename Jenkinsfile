@@ -10,7 +10,7 @@ pipeline {
             steps {
                     bat 'set'
                     bat 'dir'
-                    dir('folder') {
+                    dir('folder4') {
                         // some block
                         bat 'dir'
                     }
