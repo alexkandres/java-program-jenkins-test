@@ -1,11 +1,30 @@
-Jenkinsfile (Declarative Pipeline
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    agent any
+    
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')   
+    }
+    
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'mvn --version'
+                    bat 'set'
             }
+        }
+    }
+    
+    post {
+        always {
+            echo "always: if this shows always is workinf"
+        }
+        success {
+            echo "Success: only run if build was success"   
+        }
+        failure {
+            echo "failure: only when build fails"   
+        }
+        changed {
+            echo "changed: only when build chenges"   
         }
     }
 }
