@@ -9,6 +9,9 @@ pipeline {
         stage('Test') {
             steps {
                     bat 'set'
+                    bat 'dir'
+                    bat 'cd folder'
+                    bat 'dir'
             }
         }
     }
