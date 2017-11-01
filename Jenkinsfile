@@ -10,8 +10,12 @@ pipeline {
             steps {
                     bat 'set'
                     bat 'dir'
-                    bat 'cd folder'
-                    bat 'dir'
+                    dir('folder') {
+                        // some block
+                        bat 'dir'
+                    }
+
+                    
             }
         }
     }
