@@ -1,0 +1,3 @@
+[submodule "shared-libraries"]
+	path = shared-libraries
+	url = https://github.com/alexkandres/shared-libraries.git
